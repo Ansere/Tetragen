@@ -1,7 +1,7 @@
 # How to set up Tetragen.
 This guide will go through how to set up Tetragen properly. This will assume that you know how to manage & run a server. To optimize Tetragen, use [Paper servers](https://papermc.io), as they are faster and have a larger api. However, using a Spigot server is still fine, but it may come with problems.
  - To start off, you need to go open the file `bukkit.yml`. Before you use Tetragen, you need to first register the worlds as Tetragen-generated.
-   To do this, add a `worlds` sector in `bukkit.yml`. Then, for each world that you want to generate with Tetragen, add a section under `worlds`. Finally, under that section, add a generator tag set the generator to Tetragen,  followed by the environment that you want to generate. For example, if I wanted to generate the worlds "world", "world_nether", and "world_the_end" with their respective environments, I would add the following to the end of `bukkit.yml`:
+   To do this, add a `worlds` sector in `bukkit.yml`. Then, for each world that you want to generate with Tetragen, add a section under `worlds`. Finally, under that section, add a generator tag set the generator to Tetragen,  followed by the environment that you want to generate. For example, if I wanted to generate the worlds `world`, `world_nether`, and `world_the_end` with their respective environments, I would add the following to the end of `bukkit.yml`:
    ```yml
    # Assume that this is the bukkit.yml file
    worlds:
@@ -14,7 +14,7 @@ This guide will go through how to set up Tetragen properly. This will assume tha
    ```
    It's important to delete any worlds that you register to prevent problems that may arise from the vanilla generator interacting with Tetragen.
  - To configure things, go to Tetragen's `config.yml`, which is located in `plugins` -> `TetragenPlugin` -> `config.yml`. You may need to open the server in order for this file to appear. In this, you can configure most things. In addition, you can add Tetragen Extension Plugins, which can also help generate terrain.
-- For those using Multiverse (any world management plugin, really, but I'll use Multiverse as an example), you would create the world by using: 
+- For those using Multiverse (or any world management plugin), you would create the world by using: 
 `/mv create <world_name> <ENV> <-s seed>? -g TetragenPlugin:<TENV>`. Make sure that the world you are using is new (if not, delete the world using `/mv delete`). 
    - The `<world_name>` is what the name is going to be.
    - The `<ENV>` is the environment. To get a list of possible environments, simply do `/mv env`.
