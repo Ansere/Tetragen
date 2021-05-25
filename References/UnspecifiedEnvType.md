@@ -5,7 +5,7 @@ Because of problems of interacting with the Bukkit API, Tetragen now requires a 
 ### Using Bukkit.yml
 If you use `bukkit.yml` to register your worlds, all you need to do is specify an environment at the end of the plugin name. For example:
 ```yml
-#These are unspecified 
+#Environment is unspecified 
 worlds:
   world:
     generator: TetragenPlugin
@@ -15,7 +15,7 @@ worlds:
 ```
 can instead be replaced by this:
 ```yml
-#These are unspecified 
+#The environment is now specified :) 
 worlds:
   world:
     generator: TetragenPlugin:NORMAL
