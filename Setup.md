@@ -1,7 +1,7 @@
 # How to set up Tetragen.
-This guide will go through how to set up Tetragen properly. This will assume that you know how to manage & run a server. (To optimize Tetragen, use [Paper servers](https://papermc.io), as they are faster and have a larger api. However, using a Spigot server is still fine, but it may come with problems.)
+This guide will go through how to set up Tetragen properly. This will assume that you know how to manage & run a server. To optimize Tetragen, use [Paper servers](https://papermc.io), as they are faster and have a larger api. However, using a Spigot server is still fine, but it may come with problems.
  - To start off, you need to go open the file `bukkit.yml`. Before you use Tetragen, you need to first register the worlds as Tetragen-generated.
-   To do this, add a `worlds` sector in `bukkit.yml`. Then, for each world that you want to generate with Tetragen, add a section for that world. Finally, under that section, add a generator tag set the generator to Tetragen,  followed by the environment that you want to generate. For example, if I wanted to generate the worlds "world", "world_nether", and "world_the_end" with their respective environments, I would append the following
+   To do this, add a `worlds` sector in `bukkit.yml`. Then, for each world that you want to generate with Tetragen, add a section under `worlds`. Finally, under that section, add a generator tag set the generator to Tetragen,  followed by the environment that you want to generate. For example, if I wanted to generate the worlds "world", "world_nether", and "world_the_end" with their respective environments, I would add the following to the end of `bukkit.yml`:
    ```yml
    # Assume that this is the bukkit.yml file
    worlds:
