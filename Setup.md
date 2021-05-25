@@ -13,7 +13,7 @@ This guide will go through how to set up Tetragen properly. This will assume tha
        generator: TetragenPlugin:END
    ```
    It's important to delete any worlds that you register to prevent problems that may arise from the vanilla generator interacting with Tetragen.
- - To configure things, go to Tetragen's `config.yml`, which is located in `plugins` -> `TetragenPlugin` -> `config.yml`. You may need to open the server in order for this file to appear. In this, you can configure most things. In addition, you can add Tetragen Extension Plugins, which can also help generate terrain.
+ - To configure things, go to Tetragen's `config.yml`, which is located in `plugins` -> `TetragenPlugin` -> `config.yml`. You may need to open the server in order for this file to appear. In this, you can configure most things. You could also add Tetragen Extension Plugins to further control how Tetragen Generates terrain.
 - For those using Multiverse (or any world management plugin), you would create the world by using: 
 `/mv create <world_name> <ENV> <-s seed>? -g TetragenPlugin:<TENV>`. Make sure that the world you are using is new (if not, delete the world using `/mv delete`). 
    - The `<world_name>` is what the name is going to be.
