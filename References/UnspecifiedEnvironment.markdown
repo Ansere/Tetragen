@@ -23,7 +23,7 @@ There are 3 Environment IDs that Tetragen Supports:
 - END 
 
 So this is also valid:
-```
+```yml
 # This will generate a Nether-type world
 generator: TetragenPlugin:NETHER
 ```
