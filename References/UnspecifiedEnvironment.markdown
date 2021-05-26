@@ -8,7 +8,7 @@ Mostly when you create a world, you'll register the world generator like this:
 # If you actually try this with Tetragen, IT WILL NOT WORK!
 generator: TetragenPlugin
 ```
-However, we can give additional information about how the generate the world by giving an Environment ID, which is added to the end of the generator name.
+However, we can give additional information about how to generate the world by giving an Environment ID, which is added to the end of the generator name.
 Now, we'll do this:
 ```yml
 # This will work
