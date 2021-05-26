@@ -1,30 +1,35 @@
-From `org/tetragen/Tetragen.kt`
+Linked from `org/tetragen/Tetragen.kt`
 
 # Specifying an Environment
-Because of problems of interacting with the Bukkit API, Tetragen now requires a generation environment for each world. This guide will show you how to add a generation environment.
-### Using Bukkit.yml
-If you use `bukkit.yml` to register your worlds, all you need to do is specify an environment at the end of the plugin name. For example:
-```yml
-#Environment is unspecified 
-worlds:
-  world:
-    generator: TetragenPlugin
-  world_nether: 
-    generator: TetragenPlugin
-    #...
-```
-can instead be replaced by this:
-```yml
-#The environment is now specified :) 
-worlds:
-  world:
-    generator: TetragenPlugin:NORMAL
-  world_nether: 
-    generator: TetragenPlugin:NETHER
-    #...
-```
-Note that the environment is essentially the *type* of world that we generate. The 3 environments are `NORMAL`, `NETHER`, and `END`
-### Using a World Generator plugin (Multiverse, Multiworld, etc.)
-If you were trying to create a world using a World Generator Plugin and you got this error, just add a `:` and the environment for that world when you specify Tetragen. For example, instead of using `/mv create sample NORMAL -g TetragenPlugin`, you use `/mv create sample NORMAL -g TetragenPlugin:NORMAL`.
+Because of problems relating to the Bukkit API*, Tetragen now requires that an Environment ID is specified for each world being generated. This guide will show you how to add an Environment ID when registering worlds.
 
-Hope this helps. If you have any other questions related to setting up Tetragen, you can go to the [Setting up](https://github.com/croissant676/Tetragen/blob/main/Setup.md) page.
+Mostly when you create a world, you'll register the world generator like this:
+```yml
+# If you actually try this with Tetragen, IT WILL NOT WORK!
+generator: TetragenPlugin
+```
+However, we can give additional information about how the generate the world by giving an Environment ID, which is added to the end of the generator name.
+Now, we'll do this:
+```
+# This will work
+generator: TetragenPlugin:NORMAL
+```
+Creating a world using a world management plugin will look something like this
+`/mv create sample NORMAL -g TetragenPlugin:NORMAL`
+
+There are 3 Environment IDs that Tetragen Supports:
+- NORMAL 
+- NETHER 
+- END 
+
+So this is also valid:
+```
+# This will generate a Nether-type world
+generator: TetragenPlugin:NETHER
+```
+and this, too:
+`/mv create sample END -g TetragenPlugin:END`
+
+Hopefully this helps you. If you have any problems, contact me through Discord or Github
+
+*Namely, `Bukkit.getWorld()` always returns `null` when starting up, which prevents me from creating world-specific generators.
