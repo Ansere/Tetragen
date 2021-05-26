@@ -10,7 +10,7 @@ generator: TetragenPlugin
 ```
 However, we can give additional information about how the generate the world by giving an Environment ID, which is added to the end of the generator name.
 Now, we'll do this:
-```
+```yml
 # This will work
 generator: TetragenPlugin:NORMAL
 ```
